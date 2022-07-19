@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+body {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: hsl(218, 23%, 16%);
+  color: white;
+}
+.advice {
+  position: relative;
+  width: 530px;
+  min-height: 300px;
+  background-color: hsl(217, 19%, 24%);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+}
+.advice p:first-child {
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  letter-spacing: 2.5px;
+  font-size: 0.8rem;
+  color: hsl(150, 100%, 66%);
+}
+#quote {
+  width: 100%;
+  font-size: 28px;
+  margin-bottom: 3.5rem;
+  text-align: center;
+  /* color: hsl(217, 19%, 38%); */
+}
+#line {
+  position: absolute;
+  bottom: 2.5rem;
+  margin: 1.5rem auto;
+  width: 90%;
+  height: 1px;
+  background-color: hsl(217, 19%, 38%);
+}
+.lines {
+  position: absolute;
+  width: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 1px;
+  background-color: hsl(217, 19%, 24%);
+}
+.lines::before,
+.lines::after {
+  content: "";
+  position: absolute;
+  display: flex;
+  width: 5.5px;
+  height: 15px;
+  border-radius: 3px;
+  background-color: #fff;
+  top: -7.5px;
+}
+.lines::before {
+  left: 32%;
+}
+.lines::after {
+  right: 32%;
+}
+
+.fa-solid {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  color: hsl(218, 23%, 16%);
+  background-color: hsl(150, 100%, 66%);
+  transform: translateY(50%);
+  transition: 0.3s;
+  bottom: 0;
+}
+.fa-solid:hover {
+  box-shadow: 0 0 30px hsl(150, 100%, 66%);
+}
+.attribution {
+  position: absolute;
+  bottom: 20px;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 375px) {
+  body {
+    height: 150vh;
+  }
+  .advice {
+    width: 90%;
+    height: auto;
+    margin-bottom: 5rem;
+  }
+  .lines::before {
+    left: 20%;
+  }
+  .lines::after {
+    right: 20%;
+  }
+}
